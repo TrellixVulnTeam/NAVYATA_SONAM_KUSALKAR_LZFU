@@ -1,0 +1,1065 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/400f649c3f.js" crossorigin="anonymous"></script>
+
+<script src="src/assets/example.js"></script>
+
+<style media="all">
+
+.mobile-display{
+  display:none
+}
+.desktop-display{
+  display:block
+}
+@media (max-width:1024px){
+.desktop-display {display:none}
+.mobile-display {display:block}
+
+.mb-grey{
+  background-color: #f3f3f3;
+}
+.mb-img{
+  width: 65px; 
+  margin: 12px;
+}
+#mb-icon{
+  text-align: center;
+  color: #ee5f73;
+  margin: 12px
+}
+.mb-text-icon{
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    border-bottom: none;
+    -webkit-transition: left .2s ease-out,width .2s ease-out;
+    transition: left .2s ease-out,width .2s ease-out;
+    font-weight: 510;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+.column-mb {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row-mb::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
+.column-mb-sub {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row-mb-sub::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
+
+
+input[type="search"] {
+  -webkit-appearance: none !important;
+  background-clip: padding-box;
+  background-color: white;
+  vertical-align: middle;
+  border-radius: 0.25rem;
+  border: 1px solid #e0e0e5;
+  font-size: 1rem;
+  width: 100%;
+  line-height: 2;
+
+  -webkit-transition: border-color 0.2s;
+  -moz-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+
+
+form.search-form {
+  display: flex;
+  justify-content: center;
+  width: 92%;
+}
+
+label {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+input.search-field {
+  margin-bottom: 28px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: center;
+  height: 51px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input.search-submit {
+  height: 51px;
+  margin: 0;
+  /* padding: 1rem 1.3rem; */
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  font-family: "Font Awesome 5 Free";
+  font-size: 1rem;
+  
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.button {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1.15;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  background: #ee5f73;
+  color: white;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  text-shadow: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+
+
+}
+
+
+/* *********************************************************************** */
+
+
+@media (max-width:800px){
+.desktop-display {display:none}
+.mobile-display {display:block}
+
+.mb-grey{
+  background-color: #f3f3f3;
+}
+#mb-icon{
+  text-align: center;
+  color: #ee5f73;
+  margin: 12px
+}
+.mb-img{
+  width: 50px;
+}
+.mb-text-icon{
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    border-bottom: none;
+    -webkit-transition: left .2s ease-out,width .2s ease-out;
+    transition: left .2s ease-out,width .2s ease-out;
+    font-weight: 510;
+    text-transform: uppercase;
+}
+
+
+
+input[type="search"] {
+  -webkit-appearance: none !important;
+  background-clip: padding-box;
+  background-color: white;
+  vertical-align: middle;
+  border-radius: 0.25rem;
+  border: 1px solid #e0e0e5;
+  font-size: 1rem;
+  width: 100%;
+  line-height: 2;
+
+  -webkit-transition: border-color 0.2s;
+  -moz-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+input[type="search"]:focus {
+  transition: all 0.5s;
+  box-shadow: 0 0 5px #ee5f73;
+  border-color: #ee5f73;
+  outline: none;
+}
+
+form.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+input.search-field {
+  margin-bottom: 28px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: center;
+  height: 51px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input.search-submit {
+  height: 51px;
+  margin: 0;
+  /* padding: 1rem 1.3rem; */
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  font-family: "Font Awesome 5 Free";
+  font-size: 1rem;
+  
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.button {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1.15;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  background: #ee5f73;
+  color: white;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  text-shadow: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  cursor: pointer;
+  background: #d4b743;
+  color: #292826;
+  outline: 0;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown-toggle::after {
+    display: none;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+#dropdown-toggle::after {
+    display: none;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+@media (min-width: 768px) { 
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 4px; 
+ }
+}
+@media (max-width: 767px) { 
+.dropdown:hover .dropdown-menu{
+    display: none;
+    margin-top: auto; }
+}
+/* Animated Bottom Line */
+.navbar-nav li a:before, #navbar li a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+    bottom: 0px;
+  background: #ee5f73;
+}
+
+.navbar-nav li a:before {
+  left: 0;
+  transition: 0.5s;
+}
+
+.navbar-nav li a:after {
+  background: #ee5f73;
+  right: 0;
+  /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+}
+
+.navbar-nav li a:hover:before {
+  background: #ee5f73;
+  width: 100%;
+  transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+}
+
+.navbar-nav li a:hover:after {
+  background: transparent;
+  width: 100%;
+  /* transition: 0s; */
+}
+
+/* Animated Bottom Line */
+#navbar-nav li a:before, #navbar li a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+    bottom: 0px;
+  background: #ee5f73 !important  ;
+}
+
+#navbar-nav li a:before {
+  left: 0;
+  transition: 0.5s;
+}
+
+a:after {
+  background: #ee5f73 !important;
+  right: 0;
+  text-decoration: none;
+  /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+}
+
+
+#navbar-nav li a:after {
+  background: #ee5f73 !important;
+  right: 0;
+  /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+}
+
+
+
+#navbar-nav li a:hover:before {
+  background: #ee5f73;
+  width: 100%;
+  transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+}
+
+#navbar-nav li a:hover:after {
+  background: transparent;
+  width: 100%;
+  /* transition: 0s; */
+}
+.navbar-brand {
+
+  display: inline-block;
+    padding-top: 1.3125rem;
+    padding-bottom: 1.3125rem;
+    margin-left: 2rem;
+    margin-right: 68px;
+    font-size: 28px;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.navbar-brand:hover{
+  color: #f3485f;
+}
+.nav-link{
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    border-bottom: none;
+    -webkit-transition: left .2s ease-out,width .2s ease-out;
+    transition: left .2s ease-out,width .2s ease-out;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#nav-link{
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    border-bottom: none;
+    -webkit-transition: left .2s ease-out,width .2s ease-out;
+    transition: left .2s ease-out,width .2s ease-out;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.desktop-query {
+    width: 400px;
+    line-height: 0;
+    margin: 13px -255px 6px 43px;
+    position: relative;
+}
+.desktop-query>input.desktop-searchBar {
+    display: inline-block;
+    font-size: 12px;
+    height: 20px;
+    line-height: 24px;
+    width: 80%;
+    text-align: center;
+    color: #696e79;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 8px 10px 10px;
+    margin: 0;
+    outline: 0;
+    border: 1px solid #f5f5f6;
+    border-radius: 0 0px 4px 0;
+    border-right  : 0;
+    background: white;
+    margin-left: -30px;
+}
+a.desktop-submit {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    display: inline-block;
+    height: 28px;
+    width: 40px;
+    text-align: center;
+    padding: 8px 0 2px;
+    background: #f5f5f6;
+    border: 1px solid #f5f5f6;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    position: absolute;
+    right: 18px;
+    margin-right: 29px;
+}
+.desktop-caret, .desktop-iconSearch {
+    -webkit-transform: scale(.7);
+    transform: scale(.7);
+}
+
+.desktop-iconSearch {
+    display: inline-block;
+}
+.sprites-search {
+    width: 21px;
+    height: 21px;
+    background-position: -754px 0;
+}
+
+
+/* content breaker */
+.iMagoH {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    font-family: "Mier Bold", sans-serif;
+    font-size: 30px;
+    line-height: 54px;
+    letter-spacing: 0.7px;
+    color: rgb(32, 32, 36);
+    text-align: center;
+}
+.iMagoH .sctn-line {
+    width: 22%;
+    height: 1px;
+    background: rgb(247, 168, 202);
+}
+
+
+
+
+
+
+/* bag container */
+.bag{
+  background-color: #f6f6f5;
+}
+ /*slashed container  */
+.slashed{
+  background-color: #fef7f7;
+}
+/* luxe container */
+.luxe{
+  background-color: black;
+}
+/* deal container */
+.deal{
+  background-color: #b9ee8f;
+}
+/* top-picks container */
+.top-picks{
+  background-color: #fac7ac;
+}
+
+
+
+/* women container */
+/* img slider */.xyz {
+  position: fixed; /* Set the navbar to fixed position */
+ top: 0px; /* Position the navbar at the bottom of the page */
+  width: 100%; /* Full width */
+  z-index: 999;
+  background-color: #ffebeb;
+  margin-bottom: 10px;
+  box-shadow:  5px 0px 10px 0px #aaa;
+}
+
+
+
+
+@media only screen and (max-width: 600px)  {
+  .navbar{
+    display: none;
+  }
+  .app-carousel{
+    display: none;
+  }
+}
+
+
+
+a{
+  text-decoration: none;
+  text-decoration-line: none;
+}
+a:hover{
+  text-decoration: none;
+
+}
+
+.nav-link:hover {
+    color: none;
+    text-decoration: none;
+}
+
+.icon-navbar{
+  text-decoration: none;
+  color: #ee5f73;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  /* margin: 0px -37px 5px 48px; */
+}
+
+
+.bag{
+  text-decoration: none;
+  color: #ee5f73;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  /* margin: 0px -37px 5px 48px; */
+}
+
+.bag:before{
+  content: attr(data-count);
+  position: relative;
+  font-size: 20px;
+  border-radius: 50%;
+  right: 10px;
+  background-color: red;
+  opacity: 0;
+  margin: 100px auto;
+}
+
+
+
+
+/* ************************************************************************************************* */
+/* ************************************************************************************************* */
+.header .header__cart .header__submenu .shopping-cart-container {
+	 position: absolute;
+	 top: 100px;
+	 right: 0;
+	 padding: 1em;
+	 background-color: #fff;
+	 z-index: 2;
+	 transform: scale(0);
+	 transform: translatey(-10px);
+	 opacity: 0;
+	 pointer-events: none;
+}
+ .header .header__cart .header__submenu .shopping-cart-container.open {
+	 animation: fade-down 0.3s forwards;
+	 pointer-events: auto;
+}
+ .header .header__cart .header__submenu .cart {
+	 fill: #ea332a;
+	 display: inline-block;
+	 margin-right: 2px;
+	 cursor: pointer;
+}
+ .header .header__cart .header__cart-btn {
+	 background-color: transparent;
+	 border: 2px solid #ea332a;
+	 padding: 0.8em;
+	 font-size: 1rem;
+	 border-radius: 5px;
+}
+ .header .header__cart .header__cart-btn:hover, .header .header__cart .header__cart-btn:focus {
+	 border: 3px solid #b61a12;
+}
+ .header .header__cart .header__submenu {
+	 font-size: 0.8rem;
+	 font-weight: 700;
+}
+ .header .header__cart .header__submenu .shopping-cart-container {
+	 text-align: center;
+	 min-width: 300px;
+}
+ .header .header__cart .header__submenu .shopping-cart-container table {
+	 width: 100%;
+	 padding: 0.5em;
+	 padding-bottom: 2em;
+	 border-collapse: collapse;
+	 border-spacing: 0;
+	 margin-bottom: 2.5em;
+}
+ .header .header__cart .header__submenu .shopping-cart-container table thead th {
+	 padding-bottom: 10px;
+	 border-bottom: 1px solid #ea332a;
+}
+ .header .header__cart .header__submenu .shopping-cart-container table tbody {
+	 padding-bottom: 4em;
+}
+ .header .header__cart .header__submenu .shopping-cart-container table tbody td {
+	 padding: 0.5em;
+}
+ .header .header__cart .header__submenu .cart-image {
+	 max-width: 120px;
+}
+ .header .header__cart .header__submenu .remove {
+	 text-align: center;
+	 width: 120px;
+	 height: 120px;
+	 padding: 5px 10px;
+	 border-radius: 50%;
+	 background-color: #ea332a;
+	 color: #daed0e;
+	 transition: background-color 0.3s ease-out;
+}
+ .header .header__cart .header__submenu .remove:hover, .header .header__cart .header__submenu .remove:focus {
+	 background-color: #b61a12;
+}
+ .header .header__cart .header__submenu .cart-btn {
+	 display: block;
+	 margin-bottom: 10px;
+	 padding: 0.3em;
+	 border-radius: 5px;
+	 text-align: center;
+	 text-decoration: none;
+	 background-color: transparent;
+	 color: #333;
+	 border: 1px solid #ea332a;
+}
+ .header .header__cart .header__submenu .cart-btn:hover, .header .header__cart .header__submenu .cart-btn:focus {
+	 background-color: #b61a12;
+	 color: #fff;
+}
+ .header .header__submenu .total-container {
+	 text-align: center;
+}
+ .header .header__submenu .total-container .total {
+	 font-weight: bold;
+	 font-size: 1.3em;
+}
+
+
+
+
+/* ************************************************************************************************* */
+/* ************************************************************************************************* */
+
+
+</style>
+
+<!----------------------------------------NAVBAR STARTS------------------------------------------------->
+
+
+                      
+<div class="desktop-display">
+
+<nav class="navbar navbar-expand-lg xyz ">
+  <div class="container-fluid">
+    
+
+       &nbsp;
+              <img src="../assets/img/new.png" alt="" style="    width: 4%;
+              margin-bottom: -2px;
+              margin-right: -22px;" class="navbar-img">
+                <a class="navbar-brand" href="">&nbsp;  Navyata</a>
+   
+          
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
+                            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: -42px;">
+                  <span class="navbar-toggler-icon"></span>
+                  </button> 
+             
+                            
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                          <a class="nav-link active" routerLink="/women"  data-toggle="dropdown" 
+                                              aria-haspopup="true" aria-expanded="false">
+                                              &nbsp;WOMEN&nbsp;
+                          </a>
+                                             
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                              <a class="nav-link dropdown-toggle" routerLink="/men"  id="navbarDropdownMenuLink" data-toggle="dropdown" 
+                                              aria-haspopup="true" aria-expanded="false">
+                                              &nbsp;MEN&nbsp;
+                                              </a>
+                                             
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                              <a class="nav-link dropdown-toggle"  routerLink="/kids" id="navbarDropdownMenuLink" data-toggle="dropdown" 
+                                              aria-haspopup="true" aria-expanded="false">
+                                              &nbsp;KIDS&nbsp;
+                                              </a>
+                                             
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                              <a class="nav-link dropdown-toggle"  routerLink="/beauty"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                &nbsp;BEAUTY&nbsp;
+                                              </a>
+                                             
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                              <a class="nav-link dropdown-toggle" routerLink="/living"  id="navbarDropdownMenuLink" data-toggle="dropdown" 
+                                              aria-haspopup="true" aria-expanded="false">
+                                              &nbsp;HOME & LIVING&nbsp;
+                                              </a>
+                                            </li>
+                                    </ul> &nbsp; &nbsp; &nbsp;
+                                    <div class="col-md-12">
+                                        <div class="desktop-query" data-reactid="903">
+                                          <input placeholder="Search for products, brands and more" class="desktop-searchBar" 
+                                          value="" data-reactid="904">
+                                          <a class="desktop-submit" data-reactid="905">
+                                            <i style="position: fixed;
+                                            margin-top: 9px;
+                                            margin-left: -13px;
+                                            font-size: 19px;">🔍</i>
+                                          </a>
+                                        </div>
+                                    </div>
+                        </div> 
+                   
+   
+           
+              
+              
+
+                   
+
+                                <a routerLink="/signup">
+                                  <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+                                      <ul class="navbar-nav">
+                                          <li class="nav-item dropdown">
+                                            <p class="icon-navbar">♛
+                                            <a class="nav-link dropdown-toggle" routerLink="/signup"  id="navbarDropdownMenuLink" data-toggle="dropdown" 
+                                            aria-haspopup="true" aria-expanded="false" style="  padding: 0px;">
+                                            &nbsp;PROFILE&nbsp;
+                                            </a></p> 
+                      
+                                              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                              <a class="dropdown-item" routerLink="/signup"> Account Details</a>
+                                              <a class="dropdown-item" routerLink="/signup"> Save Cards & Saved Address </a>
+                                              <a class="dropdown-item" routerLink="/signup"> History </a>
+                                              </div>
+                                          </li>
+                                      </ul>
+                                  </div>
+                                  
+                                </a>
+
+                     
+                                
+                                <div class="col-md-1">     
+                                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                      <ul class="navbar-nav">
+                                          <li class="nav-item dropdown">
+                                            <p class="icon-navbar">♥
+                                              <a class="nav-link dropdown-toggle" routerLink="/signup"  id="navbarDropdownMenuLink" data-toggle="dropdown" 
+                                              aria-haspopup="true" aria-expanded="false" style="  padding: 0px;">
+                                              &nbsp; WISHLIST &nbsp;
+                                              </a></p> 
+                        
+                          
+                                          </li>
+                                      </ul>
+                                  </div>
+                                </div>   
+                                   
+                                <div class="header__cart">
+                                <div class="col-sm-1">
+                                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                      <ul class="navbar-nav">
+                                          <li class="nav-item dropdown header__submenu" id="submenu">
+                                            <div class="cart-btn">
+                                              <p class="icon-navbar">☗
+                                              <a class="nav-link dropdown-toggle" routerLink="/signup"  
+                                                data-toggle="dropdown"  id="toggle-cart-btn"
+                                              aria-haspopup="true" aria-expanded="false" style="  padding: 0px;">
+                                              &nbsp; BAG &nbsp; 
+                                                  
+                                              </a></p> 
+                                            </div>
+                                          </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  </div>
+                                </div>            
+                </nav>
+</div>
+
+
+
+
+                <div class="mobile-display">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="mb-grey">
+
+                        <div class="col-md-12">
+                          <p style="text-align: center; text-align: center;
+                          margin: 7px;
+                          font-size: 22px;
+                          font-weight: 600;"><a href="" style="text-decoration: none;  letter-spacing: .3px;
+                          color: #282c3f;">NAVYATA</a> </p>
+                        </div>
+
+                        <div class="row-mb">
+                          <div class="column-mb">
+                            <a routerLink="/women">
+                            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/0f0be09e-4155-47bf-82e1-51044e7e7fd11645602467052-Kurtas.jpg" alt="Snow" style="width:100%">
+                            </a>
+                          </div>
+                          <div class="column-mb">
+                            <a routerLink="/men">
+                            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/dd4414f8-4e1b-4a22-997e-8e06c0a5ff861645602467167-T-Shirts.jpg" alt="Forest" style="width:100%">
+                            </a>
+                          </div>
+                          <div class="column-mb">
+                            <a routerLink="/kids">
+                            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b156f76a-26e7-4bce-9941-8a67d3c16f331645602467120-Teens-Wear.jpg" alt="Mountains" style="width:100%">
+                            </a>
+                          </div>
+                          <div class="column-mb">
+                            <a routerLink="/beauty">
+                            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/fb091b07-c275-4578-b08d-b4f93dfe9e841645602466976-Beauty.jpg" alt="Mountains" style="width:100%">
+                            </a>
+                          </div>
+                          <div class="column-mb">
+                            <a routerLink="/kids">
+                            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b34a30a6-504b-4c94-b7e1-61391d536bc51645602467038-Jewellery.jpg" alt="Mountains" style="width:100%">
+                            </a>
+                          </div>
+                             <div class="column-mb">
+                            <a routerLink="/kids">
+                            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/f9ca5609-b634-42d4-8c08-a8eaebb818b71645602467085-Sarees.jpg" alt="Mountains" style="width:100%">
+                            </a>
+                          </div>
+                        </div>
+
+                            <br>
+                            <br> 
+
+                            <div class="row-mb-sub">
+                              <div class="column-mb-sub">
+                                <p class="icon-navbar">♛
+                                  <a class="nav-link dropdown-toggle" routerLink="/signup"  id="navbarDropdownMenuLink" data-toggle="dropdown" 
+                                  aria-haspopup="true" aria-expanded="false" style="  padding: 0px;">
+                                  &nbsp; PROFILE &nbsp;
+                                  </a></p> 
+                                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">dropdown link</a>
+                                    <a class="dropdown-item" href="#">dropdown link</a>
+                                    <a class="dropdown-item" href="#">dropdown link</a>
+                                    </div>
+                              </div>
+                              <div class="column-mb-sub">
+                                <p class="icon-navbar">♥
+                                  <a class="nav-link dropdown-toggle" routerLink="/signup"  id="navbarDropdownMenuLink" data-toggle="dropdown" 
+                                  aria-haspopup="true" aria-expanded="false" style="  padding: 0px;">
+                                  &nbsp; WISHLIST &nbsp;
+                                  </a></p> 
+                              </div>
+                              <div class="column-mb-sub">
+                                <p class="icon-navbar bag">☗
+                                  <a class="nav-link dropdown-toggle" routerLink="/signup"  id="navbarDropdownMenuLink" data-toggle="dropdown" 
+                                  aria-haspopup="true" aria-expanded="false" style="  padding: 0px;">
+                                  &nbsp; BAG &nbsp;
+                                  </a></p> 
+                              </div>
+                            </div>
+                          
+
+
+                    
+                            <!-- <i class="fas fa-user" id="mb-icon"><br> <p class="mb-text-icon"> PROFILE </p></i>&nbsp; &nbsp; &nbsp; &nbsp;
+                            <i class="fas fa-heart" id="mb-icon"><br> <p class="mb-text-icon"> WISHLIST </p></i>&nbsp; &nbsp; &nbsp; &nbsp;
+                            <i class="fas fa-shopping-bag" id="mb-icon"><br> <p class="mb-text-icon"> BAG </p></i>&nbsp; &nbsp; &nbsp; &nbsp; -->
+                          
+                          
+                          
+                            <div class="wrapper">
+                              <div class="container">
+                                <form role="search" method="get" class="search-form form" action="">
+                                  <label>
+                                      <span class="screen-reader-text">Search for...</span>
+                                      <input type="search" class="search-field" placeholder="Type something..." value="" name="s" title="" />
+                                  </label>
+                                  <input type="submit" class="search-submit button">
+                              </form>
+                              </div>
+                            </div>
+                          
+                          
+                          
+          
+                              
+                          
+                
+
+                     
+
+                          <!-- <div class="mb-left-navbar">
+                            <a class="fas-fa-user">PROFILE</a>
+                          </div> -->
+
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+
+
+
+                
+
+
+
+
+
+
+
+
+<router-outlet (activate)="OnActive()" ></router-outlet>
+                  
+
+
+
+<!----------------------------------------NAVBAR ENDS------------------------------------------------->
+
+
+<app-footer></app-footer>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+ 
+
+
+
+

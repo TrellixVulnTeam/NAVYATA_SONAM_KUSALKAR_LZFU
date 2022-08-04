@@ -1,0 +1,622 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+
+
+<style>
+
+
+.dropdown-toggle::after {
+    display: none;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+@media (min-width: 768px) { 
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 4px; 
+ }
+}
+@media (max-width: 767px) { 
+.dropdown:hover .dropdown-menu{
+    display: none;
+    margin-top: auto; }
+}
+/* Animated Bottom Line */
+.navbar-nav li a:before, #navbar li a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -1px;
+  background: #ee5f73;
+}
+
+.navbar-nav li a:before {
+  left: 0;
+  transition: 0.5s;
+}
+
+.navbar-nav li a:after {
+  background: #ee5f73;
+  right: 0;
+  /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+}
+
+.navbar-nav li a:hover:before {
+  background: #ee5f73;
+  width: 100%;
+  transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+}
+
+.navbar-nav li a:hover:after {
+  background: transparent;
+  width: 100%;
+  /* transition: 0s; */
+}
+.nav-link{
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    border-bottom: none;
+    -webkit-transition: left .2s ease-out,width .2s ease-out;
+    transition: left .2s ease-out,width .2s ease-out;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.desktop-query {
+  width: 400px;
+    float: right;
+    line-height: 0;
+    margin: 13px -255px 6px 43px;
+    position: relative;
+}
+.desktop-query>input.desktop-searchBar {
+    display: inline-block;
+    font-size: 12px;
+    height: 20px;
+    line-height: 24px;
+    width: 80%;
+    text-align: center;
+    color: #696e79;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 8px 10px 10px;
+    margin: 0;
+    outline: 0;
+    border: 1px solid #f5f5f6;
+    border-radius: 0 4px 4px 0;
+    border-left: 0;
+    background: #f5f5f6;
+}
+a.desktop-submit {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    display: inline-block;
+    height: 28px;
+    width: 40px;
+    text-align: center;
+    padding: 8px 0 2px;
+    background: #f5f5f6;
+    border: 1px solid #f5f5f6;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    position: absolute;
+    left: -41px;
+}
+.desktop-caret, .desktop-iconSearch {
+    -webkit-transform: scale(.7);
+    transform: scale(.7);
+}
+
+.desktop-iconSearch {
+    display: inline-block;
+}
+.sprites-search {
+    width: 21px;
+    height: 21px;
+    background-position: -754px 0;
+}
+.navbar-brand {
+    margin-right: 0rem;
+    font-size: 28px;
+    margin-top: 15px;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.navbar-brand:hover {
+  color: #282c3f;
+}
+
+/* content breaker */
+.iMagoH {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    font-family: "Mier Bold", sans-serif;
+    font-size: 30px;
+    line-height: 54px;
+    letter-spacing: 0.7px;
+    color: rgb(32, 32, 36);
+    text-align: center;
+}
+.iMagoH .sctn-line {
+    width: 22%;
+    height: 1px;
+    background: rgb(247, 168, 202);
+}
+
+
+
+
+/* bag container */
+.bag{
+  background-color: #f6f6f5;
+}
+ /*slashed container  */
+.slashed{
+  background-color: #fef7f7;
+}
+/* luxe container */
+.luxe{
+  background-color: black;
+}
+/* deal container */
+.deal{
+  background-color: #b9ee8f;
+}
+/* top-picks container */
+.top-picks{
+  background-color: #fac7ac;
+}
+
+
+
+/* women container */
+/* img slider */
+
+
+</style>
+
+<!----------------------------------------CAROUSEL STARTS------------------------------------------------->
+<app-carousel [images]="images"
+	[autoSlide]="true"></app-carousel>
+
+  <br>
+  <br>
+<!----------------------------------------CAROUSEL  ENDS------------------------------------------------->
+
+  <!----------------------------------------BAG CONTAINER STARTS----------------------------------------------->
+
+  <div class="S_SectionHeader__S_SectionHeaderDesk-sc-xeedx1-1 iMagoH sctn-header">
+    <div class="sctn-line"></div><span>CATEGORIES TO BAG</span><div class="sctn-line"></div></div>
+  
+    <br>
+  
+  
+  
+  <div class="bag">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <a routerLink="/women-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/aa4658b5-d723-4652-9ea1-00456b355c3a1645602467046-Kurta-Sets.jpg" 
+        alt="b-1" style="width: 100%;"></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/women-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/aae4be67-e611-47f4-b94e-92a16a36df731645602467007-Hangbags.jpg" 
+        alt="b-2" style="width: 100%;" ></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/women-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/0f0be09e-4155-47bf-82e1-51044e7e7fd11645602467052-Kurtas.jpg" 
+        alt="b-3" style="width: 100%;"></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/men-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/dd4414f8-4e1b-4a22-997e-8e06c0a5ff861645602467167-T-Shirts.jpg" 
+        alt="b-4" style="width: 100%;" ></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/women-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/f9ca5609-b634-42d4-8c08-a8eaebb818b71645602467085-Sarees.jpg" 
+        alt="b-5" style="width: 100%;" ></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/women-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b34a30a6-504b-4c94-b7e1-61391d536bc51645602467038-Jewellery.jpg" 
+        alt="b-6" style="width: 100%;" ></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/kids-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b156f76a-26e7-4bce-9941-8a67d3c16f331645602467120-Teens-Wear.jpg" 
+        alt="b-7" style="width: 100%;" ></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/beauty-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/fb091b07-c275-4578-b08d-b4f93dfe9e841645602466976-Beauty.jpg" 
+        alt="b-8" style="width: 100%;" ></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/women-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b827f900-ed61-4467-84fa-a6e357787e761645602467079-Plus-Size-Styles_W.jpg" 
+        alt="b-9" style="width: 100%;" ></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/men-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/5860c3c2-a639-4625-ac1d-4d55406f128a1645602467134-Track-Pants.jpg" 
+        alt="b-10" style="width: 100%;" ></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/men-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/736f3951-e67b-414f-bfb1-56e2794d441d1645602467114-Sports-Shoes.jpg" 
+        alt="b-11" style="width: 100%;"></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/kids-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/355b9499-3345-4457-8b3b-2eeceaecf4561645602467020-Infant-Essentials.jpg" 
+        alt="b-12" style="width: 100%;"></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/men-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/d13255df-c846-4dbd-8458-77ccaba4f9eb1645602467142-Trousers.jpg" 
+        alt="b-13" style="width: 100%;"></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/beauty-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/09b3164c-241a-4134-baa1-49b12c56c3901645602466968-Bath-Essentials.jpg" 
+        alt="b-14" style="width: 100%;"></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/kids-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/12c3b4aa-8160-442f-b93e-e896eafb1b0a1645602467160-T-Shirts-_-Shorts_Kids.jpg" 
+        alt="b-15" style="width: 100%;"></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/women-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/d3c5cd23-392f-40be-8080-99ffb79c27261645602467128-Tops.jpg" 
+        alt="b-16" style="width: 100%;"></a>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/men-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/054a056f-33e8-4b6c-b747-9b88d7fce0a11645602467174-Watches.jpg" 
+        alt="b-17" style="width: 100%;"></a>
+      </div>
+        <div class="col-md-2">
+          <a routerLink="/men-detail">
+        <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/7f814546-b705-4d9b-9ab5-1ddfeca786391645602467001-Flip-Flops.jpg" 
+        alt="b-18" style="width: 100%;"></a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!----------------------------------------BAG CONTAINER ENDS----------------------------------------------->
+  
+  <!----------------------------------------deal-of-day CONTAINER STARTS----------------------------------------------->
+<div class="container-home"><!-- home-container   -->
+
+<br>
+<br>
+  <div class="S_SectionHeader__S_SectionHeaderDesk-sc-xeedx1-1 iMagoH sctn-header">
+      <div class="sctn-line"></div><span>DEAL OF DAY</span><div class="sctn-line"></div></div>
+    
+      <br>
+    
+     <div class="deal">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2">
+            <a routerLink="/men-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/2/f9f0ddd6-cf76-4657-9af5-eaa00683be501654182932219-T-Shirts.jpg" 
+            alt="d-1" style="width: 100%;"></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/women-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/2/0ca29c10-c007-405f-b7b2-a7891cf6f3231654182966876-Kurtas---Kurta-Sets.jpg" 
+            alt="d-2" style="width: 100%;"></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/men-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/2/ffd585a8-829a-4b8b-ab21-712cabe45fe81654183060542-Myntra-Unique-Styles.jpg" 
+            alt="d-3" style="width: 100%;"></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/men-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/2/9df6a713-4ac3-4200-a09f-ee3a97417ef71654183107703-Belts---Wallets.jpg" 
+            alt="d-4" style="width: 100%;" ></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/men-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/2/15d82fdb-8720-4d07-a849-b7cf64fe5a561654183159648-Casual-Shoes---Flip-Flops--1-.jpg" 
+            alt="d-5" style="width: 100%;" ></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/women-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/2/791b797d-8fa1-4e99-809c-7c104b81537e1654183239410-Plum.jpg" 
+            alt="d-6" style="width: 100%;" ></a>
+          </div>
+        </div>
+      </div>
+     </div>
+    
+    <!----------------------------------------deal-of-day CONTAINER ends----------------------------------------------->
+    
+    
+  <!----------------------------------------SLASHED CONTAINER STARTS----------------------------------------------->
+  <br>
+  <br>
+
+  <div class="S_SectionHeader__S_SectionHeaderDesk-sc-xeedx1-1 iMagoH sctn-header">
+    <div class="sctn-line"></div><span>BRANDS AT SLASHED PRICES</span><div class="sctn-line"></div></div>
+  
+    <br>
+  <div class="slashed">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/8cd7ec33-78fe-4b40-802d-365238b1376e1644475927229-Sangria.jpg" 
+          alt="s-1" style="width: 100%;"></a>
+        </div>
+        <div class="col-md-2">
+         <a routerLink="/men-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/8/e96d85b8-7a62-4f57-898a-6c291ffb4d7f1644339048429-HRX_HP.jpg" 
+          alt="s-2" style="width: 100%;"></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/men-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/8/5809282f-372d-4881-a8dc-95d5958a86be1644338988944-Roadster_HP.jpg" 
+          alt="s-3" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/af85f560-cd67-469a-8405-4ec64a33f9971644475927251-Dressberry.jpg" 
+          alt="s-4" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/e8546602-b217-45b0-a2d4-9469ba59938f1644475927176-Chemistry.jpg" 
+          alt="s-5" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/3cbf365e-8027-4aed-859b-6d40886418d21644475927244-Anouk--1-.jpg" 
+          alt="s-6" style="width: 100%;" ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  
+  <div class="slashed">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/83ac07a7-65b3-4ede-a434-d9e3d103e3591644475927220-Moda-Rapido_1.jpg" 
+          alt="s-7" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/4900ccb0-86be-4fa4-806e-9cad9496e3db1644475927196-INVICTUS.jpg" 
+          alt="s-8" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/b55aac85-4eb7-44d0-94bb-5077e8da70001644475927183-House-of-Pataudi.jpg" 
+          alt="s-9" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/fa16e2c8-d5af-4d71-8dfb-14484fd0db811644475927213-Moda-Rapido_2.jpg" 
+          alt="s-10" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/f3120cb8-1af3-40fa-b7ed-02466eb03def1644475927205-Kook-N-Keech.jpg" 
+          alt="s-11" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/40ddc119-a9bd-4117-ad8b-fc5bcc6a09141644475927190-ether.jpg" 
+          alt="s-12" style="width: 100%;" ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!----------------------------------------SLASHED CONTAINER ENDS----------------------------------------------->
+  
+  
+  
+  <!----------------------------------------luxe CONTAINER starts----------------------------------------------->
+  <br>
+  <br>
+  <div class="S_SectionHeader__S_SectionHeaderDesk-sc-xeedx1-1 iMagoH sctn-header">
+    <div class="sctn-line"></div><span>NAVYATA LUXE</span><div class="sctn-line"></div></div>
+  
+    <br>
+  
+    <div class="luxe">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2">
+            <a routerLink="/women-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/8c07792e-bbf9-4935-8d9c-3a6a66eba4f01636726166240-HP-DKNY.jpg" 
+            alt="l-1" style="width: 100%;" ></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/men-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/1cbf16e3-afe2-4013-af4d-4e427f1e30ee1636726166266-HP-Junghans.jpg" 
+            alt="l-2" style="width: 100%;" ></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/women-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/98b141e0-8d71-4e1b-8afa-49d1b7113a141636726166278-HP-Luxe.jpg" 
+            alt="l-3" style="width: 100%;" ></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/men-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/35f5db21-a813-4c1a-81e4-7ca2bc5a08351636726166290-HP-Oris.jpg" 
+            alt="l-4" style="width: 100%;" ></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/men-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/a9d39733-2022-4964-8c22-6c9e43d8502a1636726166259-HP-Hackett.jpg" 
+            alt="l-5" style="width: 100%;" ></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/women-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/6/17/bfa35f05-88b3-419f-af88-83c2ea0483f91623933299966-HPCarouselVisibility-MyntraLuxe-Tedbaker.jpg" 
+            alt="l-6" style="width: 100%;" ></a>
+          </div>
+  
+          <div class="col-md-2">
+            <a routerLink="/women-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/884c0181-9da3-43c4-89f5-8696b97ec7751636726166246-HP-Dyson.jpg" 
+            alt="l-7" style="width: 100%;" ></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/women-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/6/17/4fac3c61-9e54-486c-a083-6f61df81436c1623933299972-HPCarouselVisibility-MyntraLuxe-Tissot.jpg" 
+            alt="l-8" style="width: 100%;" ></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/women-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/7e273a5a-9372-4956-af96-38aa903668201636726166272-HP-KarlLagerfeld.jpg" 
+            alt="l-9" style="width: 100%;" ></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/women-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/6/17/9b04f96a-f1ed-4edc-8840-483719055fdb1623940080549-HPCarouselVisibility-MyntraLuxe-ExploreStore.jpg" 
+            alt="l-10" style="width: 100%;" ></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/women-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/6eaf8591-e92b-4ab3-a4e5-f38caac6c7d91636726166295-HP-POLORalphLauren.jpg" 
+            alt="l-11" style="width: 100%;" ></a>
+          </div>
+          <div class="col-md-2">
+            <a routerLink="/women-detail">
+            <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/6/17/adf54639-1714-4935-8d22-ceef8ef1d8d31623940080665-HPCarouselVisibility-TheCollective-ExploreStore.jpg" 
+            alt="l-12" style="width: 100%;" ></a>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  <!----------------------------------------luxe CONTAINER ends----------------------------------------------->
+  
+  
+  <!----------------------------------------top-picks CONTAINER ends----------------------------------------------->
+  
+  <br>
+  <br>
+  <div class="S_SectionHeader__S_SectionHeaderDesk-sc-xeedx1-1 iMagoH sctn-header">
+    <div class="sctn-line"></div><span>TOP PICKS</span><div class="sctn-line"></div></div>
+  
+    <br>
+  
+  
+  <div class="top-picks">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/062cea23-9a6a-44b9-bdd4-87cae6a462311645602543339-Kurta-sets.jpg" 
+          alt="t-1" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/8d65d400-decd-4f42-902c-a40350a16ed11645602543346-Kurtas.jpg" 
+          alt="t-2" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/398ee53b-5899-4a9a-9d0b-b35d60c01cb41645602543325-Dresses.jpg" 
+          alt="t-3" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/2f410d81-7fae-400e-9ecc-b4a8b6df72b91645602543430-Women-Jeans.jpg" 
+          alt="t-4" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/82a9be01-3032-4725-9500-bcc94366b7931645602543399-Mens-Shirts.jpg" 
+          alt="t-5" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-2">
+          <a routerLink="/women-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/c6b09c0f-5c57-472c-a3fc-854ec506a90e1645602543387-Men-T-shirt.jpg" 
+          alt="7-6" style="width: 100%;" ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!----------------------------------------top-picks CONTAINER ends----------------------------------------------->
+  
+  <!----------------------------------------top-picks CONTAINER ends----------------------------------------------->
+  
+  <br>
+  <br>
+  <div class="S_SectionHeader__S_SectionHeaderDesk-sc-xeedx1-1 iMagoH sctn-header">
+    <div class="sctn-line"></div><span>GIFTING CARDS</span><div class="sctn-line"></div></div>
+  
+    <br>
+  
+  
+  <div class="gift-cards">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a routerLink="/beauty-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/ef1e7c6b-bec4-471c-9c36-72fffd975c0c1636738225251-happy-wedding.jpg" 
+          alt="t-1" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-4">
+          <a routerLink="/living-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/72f3fe20-f0a5-4894-852c-817b40b285291636738225244-happy-birthday.jpg" 
+          alt="t-2" style="width: 100%;" ></a>
+        </div>
+        <div class="col-md-4">
+          <a routerLink="/beauty-detail">
+          <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/0b639a7e-20ed-4c37-87b4-279616accc2b1636738225231-house-warming.jpg" 
+          alt="t-3" style="width: 100%;" ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!----------------------------------------top-picks CONTAINER ends----------------------------------------------->
+  
+</div> <!-- home-container   -->
+  
+  
+  

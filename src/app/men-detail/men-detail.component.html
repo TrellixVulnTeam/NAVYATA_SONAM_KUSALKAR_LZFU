@@ -1,0 +1,1344 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/400f649c3f.js" crossorigin="anonymous"></script>
+
+
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Rammetto+One");
+ * {
+	 box-sizing: border-box;
+   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+ *:before, *:after {
+	 box-sizing: inherit;
+}
+ body {
+	 font-size: 100%;
+	 line-height: 1.6;
+	 font-family: "Montserrat", sans-serif;
+	 font-weight: 300;
+	 color: #333;
+	 background-color: #fff;
+}
+ .container {
+	 width: 100%;
+	 max-width: 992px;
+   /* margin: 0px 66px -104px 0px; */
+   float: right;
+	 padding: 0 1em;
+	 background-color: #fff;
+}
+ @media (min-width: 900px) {
+	 .container {
+		 padding: 0;
+	}
+}
+ ul {
+	 list-style: none;
+	 padding: 0 1em;
+	 margin-left: 0;
+}
+ a:link, a:visited, a:hover, a:active, a:focus {
+	 text-decoration: none;
+	 transition: all 0.3s;
+}
+ button {
+	 transition: all 0.3s;
+}
+ img {
+	 display: block;
+	 width: 100%;
+	 height: auto;
+}
+ .display-title {
+	 font-size: 1.8rem;
+	 text-align: center;
+	 letter-spacing: 1.3px;
+}
+ @media (min-width: 600px) {
+	 .display-title {
+		 font-size: 3rem;
+	}
+}
+ .page-title {
+	 text-align: center;
+	 font-weight: 700;
+}
+ @media (min-width: 600px) {
+	 .page-title {
+		 font-size: 2rem;
+		 font-weight: 300;
+	}
+}
+ .text-light {
+	 color: #efefef;
+}
+ .grid {
+	 display: grid;
+	 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	 grid-column-gap: 1em;
+	 grid-row-gap: 2em;
+}
+ .header .arrow {
+	 width: 50px;
+	 height: 50px;
+	 position: relative;
+	 margin: -200px auto 0;
+	 text-align: center;
+	 border-radius: 50%;
+	 background-color: #daed0e;
+	 box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+ .header .arrow:hover, .header .arrow:focus {
+	 animation: point-down 1s alternate infinite;
+}
+ .header .arrow svg {
+	 margin-top: 15px;
+	 fill: #333;
+}
+ .header .header__top {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 position: relative;
+}
+ .header .header__cart .header__submenu .shopping-cart-container {
+	 position: absolute;
+	 top: 100px;
+	 right: 0;
+	 padding: 1em;
+	 background-color: #fff;
+	 z-index: 2;
+	 transform: scale(0);
+	 transform: translatey(-10px);
+	 opacity: 0;
+	 pointer-events: none;
+}
+ .header .header__cart .header__submenu .shopping-cart-container.open {
+	 animation: fade-down 0.3s forwards;
+	 pointer-events: auto;
+}
+ .header .header__cart .header__submenu .cart {
+	 fill: #ea332a;
+	 display: inline-block;
+	 margin-right: 2px;
+	 cursor: pointer;
+}
+ .header .header__cart .header__cart-btn {
+	 background-color: transparent;
+	 border: 2px solid #ea332a;
+	 padding: 0.8em;
+	 font-size: 1rem;
+	 border-radius: 5px;
+}
+
+ .header .header__cart .header__submenu {
+	 font-size: 0.8rem;
+	 font-weight: 700;
+}
+ .header .header__cart .header__submenu .shopping-cart-container {
+	 text-align: center;
+	 min-width: 300px;
+}
+ .header .header__cart .header__submenu .shopping-cart-container table {
+	 width: 100%;
+	 padding: 0.5em;
+	 padding-bottom: 2em;
+	 border-collapse: collapse;
+	 border-spacing: 0;
+	 margin-bottom: 2.5em;
+}
+ .header .header__cart .header__submenu .shopping-cart-container table thead th {
+	 padding-bottom: 10px;
+	 border-bottom: 1px solid #ea332a;
+}
+ .header .header__cart .header__submenu .shopping-cart-container table tbody {
+	 padding-bottom: 4em;
+}
+ .header .header__cart .header__submenu .shopping-cart-container table tbody td {
+  padding: 5.5em;
+    border: 1px solid grey;
+}
+ .header .header__cart .header__submenu .cart-image {
+	 max-width: 120px;
+}
+ .header .header__cart .header__submenu .remove {
+	 text-align: center;
+	 width: 120px;
+	 height: 120px;
+	 padding: 5px 10px;
+	 border-radius: 50%;
+	 background-color: #ea332a;
+	 color: #daed0e;
+	 transition: background-color 0.3s ease-out;
+}
+
+ .header .header__cart .header__submenu .cart-btn {
+	 display: block;
+	 margin-bottom: 10px;
+	 padding: 0.3em;
+	 border-radius: 5px;
+	 text-align: center;
+	 text-decoration: none;
+   margin-left: 49rem;
+	 background-color: transparent;
+	 color: #333;
+	
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1pxsolidrgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+.card__info:hover{
+  box-shadow: 0 35px 80px rgb(0 0 0 / 15%);
+  border-radius: 20px ;  
+  height: 36%;
+}
+.card__info{
+  text-align: center;
+  padding: 18px;
+}
+
+
+ .header .header__title {
+	 font-family: "Rammetto One", cursive;
+	 font-size: 2rem;
+	 color: #ea332a;
+}
+ .header .header__subtitle {
+	 font-size: 1.2rem;
+	 display: block;
+	 margin-top: -10px;
+	 line-height: 0.9;
+	 margin-left: 20px;
+}
+ .header .header__main {
+	 height: 95vh;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 background-image: linear-gradient(to right bottom, rgba(234, 51, 42, 0.7), rgba(170, 37, 30, 0.7)), url(https://images.unsplash.com/photo-1504670073073-6123e39e0754?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=5a5a75419e84813c91b906d3fc38a4b8);
+	 background-size: cover;
+	 background-position: top;
+	 background-repeat: no-repeat;
+	 clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}
+ .page-content {
+  margin-top: -62px
+}
+ .card {
+	 line-height: 1;
+	 transition: all 0.3s;
+}
+.card:hover{
+  box-shadow: 0 35px 80px rgb(0 0 0 / 15%);
+}
+
+ .card__title {
+  font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center; 
+    margin-top: inherit;
+    -webkit-margin-before: initial;
+    margin-block-start: 0;
+    color: #282c3f;
+    margin-bottom: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+ .card__text {
+  color: #535766;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    display: block;
+}
+ .card__btn {
+    width: 69%;
+    text-align: center;
+    padding: 9px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center; 
+    margin-top: inherit;
+    border-radius: 5px;
+    background-color: #ffff;
+    border: 1px solid #d8cac9;
+    color: #141313;
+}
+
+ .footer {
+	 margin-top: 4em;
+	 padding-bottom: 2em;
+	 padding-top: 2em;
+	 border-top: 1px dashed #b61a12;
+}
+ .footer__container {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 font-size: 0.8rem;
+}
+ .footer__link-item, .footer__link-item {
+	 color: #ea332a;
+}
+ .footer__link-item:hover, .footer__link-item:hover, .footer__link-item:focus, .footer__link-item:focus {
+	 color: #9e1610;
+}
+ @keyframes point-down {
+	 100% {
+		 transform: translatey(20px);
+	}
+}
+ @keyframes fade-down {
+	 80% {
+		 opacity: 1;
+		 visibility: visible;
+		 transform: translatey(20px);
+		 transform: scale(1.3);
+		 animation-timing-function: cubic-bezier(0, 1, 0.75, 0);
+	}
+	 100% {
+		 opacity: 1;
+		 transform: translatey(0);
+		 transform: scale(1);
+		 animation-timing-function: ease-in;
+	}
+}
+ 
+
+
+
+
+
+.product-product {
+    color: #535766;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    display: block;
+}
+.product-sizes {
+    font-size: 14px;
+    color: #535665;
+    line-height: 1;
+    display: none;
+    margin-top: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.product-discountedPrice, .product-price {
+    font-size: 14px;
+    color: #282c3f;
+    font-weight: 500;
+}
+
+.product-price {
+  line-height: 15px;
+    margin: 10px 0 6px;
+    white-space: nowrap;
+}
+
+.product-strike {
+    text-decoration: line-through;
+    color: #7e818c;
+    font-weight: 400;
+    margin-left: 5px;
+    font-size: 12px;
+}
+.product-discountPercentage {
+    color: #ff905a;
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.header-product-size{
+  font-size: 14px;
+    color: #282c3f;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.size{
+    color: #7e818c;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+
+
+
+
+
+/* ************************************************************************************************* */
+/* ************************************************************************************************ */
+/* ************************************************************************************************ */
+/* ************************************************************************************************ */
+
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
+.container-list {
+  float: left;
+  max-width: 277px;
+  margin: 0 auto;
+  border-top: 5px solid #435757;
+  background-color: rgba(255, 255, 255, .2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  user-select: none;
+}
+.container-right {
+  max-width: 277px;
+  margin: 0 auto;
+
+}
+
+h2 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 16px;
+
+    clear: both;
+    color: #282c3f;
+    display: block;
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+h2::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -20px;
+  width: 5px;
+  background-color: #435757;
+}
+
+
+.items {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  counter-reset: done-items undone-items;
+}
+
+
+h2::after {
+  display: block;
+  float: right;
+  font-weight: normal;
+}
+
+.done {
+  order: 1;
+}
+
+.done::after {
+  content: ' (' counter(done-items) ')';
+}
+
+.undone {
+  order: 3;
+}
+
+.undone::after {
+  content: ' (' counter(undone-items) ')';
+}
+
+
+/* hide inputs offscreen, but at the same vertical positions as the correpsonding labels, so that tabbing scrolls the viewport as expected */
+input {
+  display: block;
+  height: 53px;
+  margin: 0 0 -53px -9999px;
+  order: 4;
+  outline: none;
+  counter-increment: undone-items;
+}
+
+input:checked {
+  order: 2;
+  counter-increment: done-items;  
+}
+
+label {
+  display: block;
+  position: relative;
+  padding: 15px 0 15px 45px;
+  border-top: 1px dashed #fff;
+  order: 4;
+  cursor: pointer;
+  animation: undone .5s;
+}
+
+label::before {
+  content: '\f10c'; /* circle outline */
+  display: block;
+  position: absolute;
+  top: 11px;
+  left: 10px;
+  font: 1.5em 'FontAwesome';
+}
+
+label:hover, input:focus + label {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+input:checked + label {
+  order: 2;
+  animation: done .5s;
+}
+
+input:checked + label::before {
+  content: '\f058'; /* circle checkmark */
+}
+
+@keyframes done {
+  0% {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, .4);
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, .4);
+  }
+}
+
+@keyframes undone {
+  0% {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, .4);
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, .4);
+  }
+}
+
+
+.left-header{
+  font-weight: 500;
+            text-transform: uppercase;
+            font-size: 20px;
+            margin: 0 0 18px;
+            text-align: center;
+            clear: both;
+            color: #7b7c84;
+            display: block;
+            font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.left-list{
+  display: block;
+    width: 95%;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 17px;
+    color: #282c3f;
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+#left-sub-header{
+  font-weight: 500;
+            text-transform: uppercase;
+            font-size: 18px;
+            margin: 0 0 18px;
+            clear: both;
+            color: #ff3f6c;;
+            display: block;
+            font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+.wlist:hover{
+  box-shadow: 10 10 80px rgba(163, 32, 32, 0.1);
+}
+
+.wlist{
+    border: 1px solid grey;
+    width: 97%;
+    padding: -4px 0px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 10 10 80px rgba(163, 32, 32, 0.1);
+}
+
+.sub-label {
+  display: block;
+  position: relative;
+  padding: 12px 0 0px 45px;
+  border-top: 1px dashed #fff;
+  order: 4;
+  cursor: pointer;
+  animation: undone .5s;
+}
+.colors-bullet{
+    color: green;
+}
+.breadcrumbs-container {
+    display: block;
+    padding: 29px 0 22px;
+    font-size: 14px;
+}
+.breadcrumbs-link {
+    color: #282c3f;
+    text-transform: capitalize;
+    display: inline-block;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+}
+.breadcrumbs-link:hover{
+	color: #ff3e6c;
+}
+a {
+    text-decoration: none;
+    color: #282c3f;
+}
+.breadcrumbs-separator {
+    color: #282c3f;
+    margin: 0 5px;
+    padding-top: 5px;
+}
+.w-card-icon{
+    font-size: 25px;
+}
+
+
+@media  (max-width: 600px)  {
+  .page-content {
+  margin-top: 70rem;
+}
+}
+
+.shop-content{
+    margin-top: -66rem;
+}
+/* ************************************************************************************************ */
+/* ************************************************************************************************ */
+/* ************************************************************************************************ */
+/* ************************************************************************************************ */
+
+
+
+  </style>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="container-list">
+                        <h1 class="left-header">FILTERS</h1>
+                <div class="items">
+                    <input id="item1" type="checkbox" checked>
+                    <label for="item1" class="left-list">BRANDS
+                        <form class="sub-checkbox">
+                            <input type="checkbox" id="fruit1" name="fruit-1" value="Apple">
+                                <label for="fruit1" class="sub-label">Roadster</label>
+                            <input type="checkbox" id="fruit2" name="fruit-2" value="Apple">
+                                <label for="fruit2" class="sub-label">Allen Solly</label>
+                            <input type="checkbox" id="fruit3" name="fruit-3" value="Apple">
+                                <label for="fruit3"  class="sub-label">WROGN</label>
+                            <input type="checkbox" id="fruit4" name="fruit-4" value="Apple">
+                                <label for="fruit4"  class="sub-label">Blackberrys</label>
+                            <input type="checkbox" id="fruit5" name="fruit-5" value="Apple">
+                                <label for="fruit5"  class="sub-label">Louis Philippe</label>
+                            <input type="checkbox" id="fruit6" name="fruit-6" value="Apple">
+                                <label for="fruit6"  class="sub-label">Mast & Harbour</label>
+                          </form>
+                    </label>
+
+
+                    <input id="item2" type="checkbox">
+                    <label for="item2">PRICE
+                        <form class="sub-checkbox">
+                            <input type="checkbox" id="fruit7" name="fruit-7" value="Apple">
+                                <label for="fruit7" class="sub-label">Rs. 269 to Rs. 1552(3083)</label>
+                           
+                            <input type="checkbox" id="fruit8" name="fruit-8" value="Apple">
+                                <label for="fruit8"  class="sub-label">Rs. 1552 to Rs. 2835(185)</label>
+
+                            <input type="checkbox" id="fruit9" name="fruit-9" value="Apple">
+                                <label for="fruit9"  class="sub-label">Rs. 2835 to Rs. 4118(10)</label>
+                          </form>
+                    </label>
+
+                    <input id="item3" type="checkbox">
+                    <label for="item3">COLORS
+                        <form class="sub-checkbox">
+                            <input type="checkbox" id="fruit10" name="fruit-10" value="Apple">
+                                <label for="fruit10" class="sub-label">
+                                    <p style="position: absolute;
+                                    margin-top: -13px;"><span style="color: darkblue;
+                                        font-size: 31px;">● &nbsp;</span>Dark Blue</p>
+                                </label>
+                           <br>
+                            <input type="checkbox" id="fruit11" name="fruit-11" value="Apple">
+                                <label for="fruit11"  class="sub-label">
+                                    <p style="position: absolute;
+                                    margin-top: -13px;"><span style="color: rgb(8, 10, 26);
+                                        font-size: 31px;">● &nbsp;</span>Navy Blue</p>
+                                </label>
+                            <br>
+                            <input type="checkbox" id="fruit12" name="fruit-12" value="Apple">
+                                <label for="fruit12"  class="sub-label">
+                                    <p style="position: absolute;
+                                    margin-top: -13px;"><span style="color: rgb(255, 255, 255);
+                                        font-size: 31px;">● &nbsp;</span>White</p>
+                                </label>
+                          </form>   
+                    </label>
+
+                    <input id="item4" type="checkbox">
+                    <label for="item4">DISCOUNT RANGE
+                        <input type="checkbox" id="fruit13" name="fruit-13" value="Apple">
+                                <label for="fruit13" class="sub-label">10% and above</label>
+                           
+                            <input type="checkbox" id="fruit14" name="fruit-14" value="Apple">
+                                <label for="fruit14"  class="sub-label">20% and above</label>
+
+                            <input type="checkbox" id="fruit15" name="fruit-15" value="Apple">
+                                <label for="fruit15"  class="sub-label">30% and above</label>
+                    </label>
+
+
+                    <h2 class="done" id="left-sub-header" aria-hidden="true">ADD </h2>
+                    <h2 class="undone" id="left-sub-header" aria-hidden="true">CATEGORIES</h2>
+                </div>
+            </div>
+        </div>
+
+<div class="shop-content">
+                          <!-- <header class="header">
+                            <div class="container header__top">
+
+                              <div class="header__cart">
+                                <ul>
+                                  <li class="header__submenu" id="submenu">
+                                    <div class="cart-btn">
+                                    <button class="header__cart-btn" id="toggle-cart-btn">
+                                      <svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+                          </svg> Add Cart</button></div>
+                          
+                                    <div id="shopping-cart" class="shopping-cart-container">
+                                      <br>
+                                      <table id="cart-content">
+                                        <thead>
+                                          <tr>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                      </table>
+                                      <p class="total-container" id="total-price"></p>
+                                      <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+                                      <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+
+                      
+                          </header> -->
+
+
+
+
+
+
+                      <div class="" style="padding: 0px;">
+
+                          <main class="container page-content">
+                         
+                            <div class="grid" id="grid">
+                            
+                              <div class="card">
+                                <a  routerLink="/men-card">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1700944/2022/3/2/093bc645-d461-4128-94a1-0692803944141646215571321-HRX-by-Hrithik-Roshan-Men-Yellow-Printed-Cotton-Pure-Cotton--1.jpg" class="card__image" alt="">
+                                <div class="card__info">
+                                  <h4 class="card__title">HRX</h4>
+                                  <p class="card__text">Men slim fit casual T-shirt</p>
+                                  <div class="product-size"> 
+                                    <h3 class="header-product-size">Sizes
+                                    <span class="size">S,M,L,XL,XXL</span></h3>
+                                </div>
+                                  <p class="card__price">
+                                    <span>
+                                      <span class="product-discountedPrice">
+                                      <!-- react-text: 17546 -->Rs. 
+                                      <!-- /react-text --><!-- react-text: 17547 -->
+                                      974<!-- /react-text --></span>
+                                      <span class="product-strike">
+                                      <!-- react-text: 17549 -->Rs.
+                                      <!-- /react-text --><!-- react-text: 17550 -->
+                                      3748<!-- /react-text --></span>
+                                  </span>
+                                  <span class="product-discountPercentage">(74% OFF)</span>
+                                  </p>
+
+                                      <button type="button" class="card__btn add-to-cart" data-id="2">  
+                                      Add to Cart</button>
+                               
+                                      
+                                </div>
+                              </a>
+                              </div>
+                       
+                              <!--.card-->
+                              <div class="card">
+                                <a routerLink="/men-card">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/2478210/2019/11/8/85bba7bd-b3f3-4ea3-a063-5890340301471573214255868-WROGN-Men-Pink-Slim-Fit-Solid-Casual-Shirt-7431573214250598-1.jpg" class="card__image" alt="">
+                                <div class="card__info">
+                                  <h4 class="card__title">WROGN</h4>
+                                  <p class="card__text">Men slim fit casual T-shirt</p>
+                                  <div class="product-size"> 
+                                    <h3 class="header-product-size">Sizes
+                                    <span class="size">S,M,L,XL,XXL</span></h3>
+                                </div>
+                                  <p class="card__price">
+                                    <span>
+                                      <span class="product-discountedPrice">
+                                      <!-- react-text: 17546 -->Rs. 
+                                      <!-- /react-text --><!-- react-text: 17547 -->
+                                      974<!-- /react-text --></span>
+                                      <span class="product-strike">
+                                      <!-- react-text: 17549 -->Rs.
+                                      <!-- /react-text --><!-- react-text: 17550 -->
+                                      3748<!-- /react-text --></span>
+                                  </span>
+                                  <span class="product-discountPercentage">(74% OFF)</span>
+                                  </p>
+
+                                      <button type="button" class="card__btn add-to-cart" data-id="2">  
+                                      Add to Cart</button>
+                               
+                                      
+                                </div>
+                               </a>
+                              </div>
+                              <!--.card-->
+                              <div class="card">
+                                <a  routerLink="/men-card">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/8889735/2019/4/1/ca936d22-0508-4c9a-8a75-da38b00916371554121346539-Roadster-Men-Navy-Blue--Grey-Regular-Fit-Checked-Casual-Shir-1.jpg" class="card__image" alt="">
+                                <div class="card__info">
+                                  <h4 class="card__title">ROADSTER</h4>
+                                  <p class="card__text">Men slim fit casual Shirt</p>
+                                  <div class="product-size"> 
+                                    <h3 class="header-product-size">Sizes
+                                    <span class="size">S,M,L,XL,XXL</span></h3>
+                                </div>
+                                  <p class="card__price">
+                                    <span>
+                                      <span class="product-discountedPrice">
+                                      <!-- react-text: 17546 -->Rs. 
+                                      <!-- /react-text --><!-- react-text: 17547 -->
+                                      974<!-- /react-text --></span>
+                                      <span class="product-strike">
+                                      <!-- react-text: 17549 -->Rs.
+                                      <!-- /react-text --><!-- react-text: 17550 -->
+                                      3748<!-- /react-text --></span>
+                                  </span>
+                                  <span class="product-discountPercentage">(74% OFF)</span>
+                                  </p>
+
+                                      <button class="card__btn add-to-cart" data-id="3">Add to Cart</button>
+                              
+                                </div>
+                              </a>
+                              </div>
+                              <!--.card-->
+                              <div class="card">
+                                <a  routerLink="/men-card">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/9951619/2019/8/22/3205bd9f-1d21-4a27-af7e-b2a7bbca02a71566476861368-Roadster-Men-Shirts-1841566476860151-1.jpg" class="card__image" alt="">
+                                <div class="card__info">
+                                  <h4 class="card__title">WROGN</h4>
+                                  <p class="card__text">Men slim fit casual Shirt</p>
+                                  <div class="product-size"> 
+                                    <h3 class="header-product-size">Sizes
+                                    <span class="size">S,M,L,XL,XXL</span></h3>
+                                </div>
+                                  <p class="card__price">
+                                    <span>
+                                      <span class="product-discountedPrice">
+                                      <!-- react-text: 17546 -->Rs. 
+                                      <!-- /react-text --><!-- react-text: 17547 -->
+                                      974<!-- /react-text --></span>
+                                      <span class="product-strike">
+                                      <!-- react-text: 17549 -->Rs.
+                                      <!-- /react-text --><!-- react-text: 17550 -->
+                                      3748<!-- /react-text --></span>
+                                  </span>
+                                  <span class="product-discountPercentage">(74% OFF)</span>
+                                  </p>
+
+                                      <button class="card__btn add-to-cart" data-id="4">Add to Cart</button>
+                              
+                                </div>
+                                </a>
+                              </div>
+                              <!--.card-->
+                            
+                              <!--.card-->
+                              <div class="card">
+                                <a  routerLink="/men-card">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/3314141/2018/5/19/e55c2244-8515-44d5-93da-d719f3f8d4551526706357637-Roadster-Men-Tshirts-6461526706356615-1.jpg" class="card__image" alt="">
+                                <div class="card__info">
+                                  <h4 class="card__title">Allen Solly</h4>
+                                  <p class="card__text">Men slim fit casual T-shirt</p>
+                                  <div class="product-size"> 
+                                    <h3 class="header-product-size">Sizes
+                                    <span class="size">S,M,L,XL,XXL</span></h3>
+                                </div>
+                                  <p class="card__price">
+                                    <span>
+                                      <span class="product-discountedPrice">
+                                      <!-- react-text: 17546 -->Rs. 
+                                      <!-- /react-text --><!-- react-text: 17547 -->
+                                      974<!-- /react-text --></span>
+                                      <span class="product-strike">
+                                      <!-- react-text: 17549 -->Rs.
+                                      <!-- /react-text --><!-- react-text: 17550 -->
+                                      3748<!-- /react-text --></span>
+                                  </span>
+                                  <span class="product-discountPercentage">(74% OFF)</span>
+                                  </p>
+
+                                      <button class="card__btn add-to-cart" data-id="5">Add to Cart</button>
+                              
+                                </div>
+                                </a>
+                              </div>
+                              <!--.card-->
+                              <div class="card">
+                                <a  routerLink="/men-card">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/1824340/2017/8/3/11501764560457-Roadster-Men-Grey-Melange-Solid-Round-Neck-T-shirt-3291501764560241-1.jpg" class="card__image" alt="">
+                                <div class="card__info">
+                                  <h4 class="card__title">Blackberry</h4>
+                                  <p class="card__text">Men slim fit casual T-shirt</p>
+                                  <div class="product-size"> 
+                                    <h3 class="header-product-size">Sizes
+                                    <span class="size">S,M,L,XL,XXL</span></h3>
+                                </div>
+                                  <p class="card__price">
+                                    <span>
+                                      <span class="product-discountedPrice">
+                                      <!-- react-text: 17546 -->Rs. 
+                                      <!-- /react-text --><!-- react-text: 17547 -->
+                                      974<!-- /react-text --></span>
+                                      <span class="product-strike">
+                                      <!-- react-text: 17549 -->Rs.
+                                      <!-- /react-text --><!-- react-text: 17550 -->
+                                      3748<!-- /react-text --></span>
+                                  </span>
+                                  <span class="product-discountPercentage">(74% OFF)</span>
+                                  </p>
+
+                                      <button class="card__btn add-to-cart" data-id="6">Add to Cart</button>
+                              
+                                </div>
+                                </a>
+                              </div>
+                              <!--.card-->
+                                  <!--.card-->
+                                  <div class="card">
+                                    <a  routerLink="/men-card">
+                                    <img src="https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/2169171/2019/5/29/cabd0aa5-6067-4ff1-b490-d72a80762fe51559130170714-Roadster-Men-Grey-Melange--Black-Colourblocked-T-shirt-62615-1.jpg" class="card__image" alt="">
+                                    <div class="card__info">
+                                      <h4 class="card__title">Roadster</h4>
+                                      <p class="card__text">Men slim fit casual T-shirt</p>
+                                      <div class="product-size"> 
+                                        <h3 class="header-product-size">Sizes
+                                        <span class="size">S,M,L,XL,XXL</span></h3>
+                                    </div>
+                                      <p class="card__price">
+                                        <span>
+                                          <span class="product-discountedPrice">
+                                          <!-- react-text: 17546 -->Rs. 
+                                          <!-- /react-text --><!-- react-text: 17547 -->
+                                          974<!-- /react-text --></span>
+                                          <span class="product-strike">
+                                          <!-- react-text: 17549 -->Rs.
+                                          <!-- /react-text --><!-- react-text: 17550 -->
+                                          3748<!-- /react-text --></span>
+                                      </span>
+                                      <span class="product-discountPercentage">(74% OFF)</span>
+                                      </p>
+                            
+                                          <button class="card__btn add-to-cart" data-id="7">Add to Cart</button>
+                                  
+                                    </div>
+                                    </a>
+                                  </div>
+                                  <!--.card-->
+                                      <!--.card-->
+                              <div class="card">
+                                <a  routerLink="/men-card">
+                                <img src="https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/1536592/2018/10/17/e5ad6a20-5fec-4923-aabe-46db9a694e721539765741785-WROGN-Men-Black-Slim-Fit-Checked-Casual-Shirt-68315397657395-1.jpg" class="card__image" alt="">
+                                <div class="card__info">
+                                  <h4 class="card__title">WROGN</h4>
+                                  <p class="card__text">Men slim fit casual Shirt</p>
+                                  <div class="product-size"> 
+                                    <h3 class="header-product-size">Sizes
+                                    <span class="size">S,M,L,XL,XXL</span></h3>
+                                </div>
+                                  <p class="card__price">
+                                    <span>
+                                      <span class="product-discountedPrice">
+                                      <!-- react-text: 17546 -->Rs. 
+                                      <!-- /react-text --><!-- react-text: 17547 -->
+                                      974<!-- /react-text --></span>
+                                      <span class="product-strike">
+                                      <!-- react-text: 17549 -->Rs.
+                                      <!-- /react-text --><!-- react-text: 17550 -->
+                                      3748<!-- /react-text --></span>
+                                  </span>
+                                  <span class="product-discountPercentage">(74% OFF)</span>
+                                  </p>
+
+                                      <button class="card__btn add-to-cart" data-id="8">Add to Cart</button>
+                              
+                                </div>
+                                </a>
+                              </div>
+                              <!--.card-->
+                            </div>
+                          </main>
+                        </div>
+
+
+</div>
+
+
+
+
+  
+<script>
+  (function() {
+  // VARS//
+  const productsContainer = document.querySelector("#grid");
+  const cartContainer = document.querySelector("#shopping-cart");
+  const cartContent = document.querySelector("#cart-content");
+  const toggleCartBtn = document.querySelector("#toggle-cart-btn");
+  const clearCartBtn = document.querySelector("#clear-cart");
+  const checkoutBtn = document.querySelector("#checkout-btn");
+  const totalPriceContainer = document.querySelector("#total-price");
+
+  // FUNCTIONS//
+
+  function toggleCart() {
+    // toggle shopping cart visibility
+    cartContainer.classList.toggle("open");
+  }
+
+  function getLSContent() {
+    // get contents from local storage.
+    // if nothing is there, create an empty array
+    const lsContent = JSON.parse(localStorage.getItem("products")) || [];
+    return lsContent;
+  }
+
+  function setLSContent(lsContent) {
+    // save content inside local storage
+    localStorage.setItem("products", JSON.stringify(lsContent));
+  }
+
+  function calculateTotal(prices) {
+    // calculate the total price in the cart
+    return prices.reduce(function(prev, next) {
+      return prev + next;
+    }, 0);
+  }
+
+  function getCartItemPrices() {
+    // extract the price numbers from the cart items to calculate total
+    const prices = [];
+    // retrieve the td element in the cart where the product price is stored
+    // for each product in the cart
+    let nums = cartContent.querySelectorAll("tr td:nth-child(3)");
+
+    // iterate over each td node and extract the price
+    // strip the $ sign from the text, turn the string into
+    // a number and push the number into the prices array
+    if (nums.length > 0) {
+      for (let cell = 0; cell < nums.length; cell++) {
+        let num = nums[cell].innerText;
+        num = num.replace(/[^\d]/g, "");
+        num = parseFloat(num);
+        prices.push(num);
+      }
+      // return the prices array
+      return prices;
+    } else {
+      return;
+    }
+  }
+
+  function displayCartTotal() {
+    // display the total cost in the cart
+    const prices = getCartItemPrices();
+    let total = 0;
+    if (prices) {
+      total = calculateTotal(prices);
+      totalPriceContainer.innerHTML = `<span class="total">Total: $${total.toFixed(
+        2
+      )}</span>`;
+    } else {
+      totalPriceContainer.innerHTML = '<span class="total">Total: $0</span>';
+    }
+  }
+
+  function displayProducts() {
+    // display all products in the cart
+
+    // get contents from local storage
+    const lsContent = getLSContent();
+    let productMarkup = "";
+    // if local storage is not empty, build the
+    // cart items markup and the appropriate details
+    if (lsContent !== null) {
+      for (let product of lsContent) {
+        productMarkup += `
+          <tr>
+          <td><img class="cart-image" src="${product.image}" alt="${
+          product.name
+        }" width="120"></td>
+          <td>
+            ${product.name}
+          </td>
+          <td>${product.price}</td>
+          <td><a href="#" data-id="${product.id}" class="remove">X</a></td>
+          </tr>
+        `;
+      }
+    } else {
+      // if no content is in local storage, alert user
+      productMarkup = "Your cart is empty.";
+    }
+    // add markup to DOM
+    cartContent.querySelector("tbody").innerHTML = productMarkup;
+  }
+
+  function saveProduct(clickedBtn) {
+    // save selected product in local storage and display it in the cart together
+
+    // vars
+    const productId = clickedBtn.getAttribute("data-id");
+    const card = clickedBtn.parentElement.parentElement;
+    const cardInfo = clickedBtn.parentElement;
+    const prodImage = card.querySelector("img").src;
+    const prodName = cardInfo.querySelector("h4").textContent;
+    const prodPrice = cardInfo.querySelector(".card__price").textContent;
+
+    let isProductInCart = false;
+
+    // get local storage array
+    const lsContent = getLSContent();
+
+    // to avoid user adds the same course twice, check
+    // the product is not in LS already before adding it
+    lsContent.forEach(function(product) {
+      if (product.id === productId) {
+        alert("This course is already in your cart.");
+        isProductInCart = true;
+      }
+    });
+
+    // only if the product is not already in the cart,
+    // create an object representing selected product info
+    // and push it into local storage array
+    if (!isProductInCart) {
+      lsContent.push({
+        id: productId,
+        image: prodImage,
+        name: prodName,
+        price: prodPrice
+      });
+
+      // add product into into local storage
+      setLSContent(lsContent);
+      // update the display of courses in the shopping cart
+      displayProducts();
+    }
+  }
+
+  function removeProduct(productId) {
+    // remove product from cart (and from local storage)
+
+    // retrieve list of products from LS
+    const lsContent = getLSContent();
+
+    // get the index of the product item to remove
+    // inside the local storage content array
+    let productIndex;
+    lsContent.forEach(function(product, i) {
+      if (product.id === productId) {
+        productIndex = i;
+      }
+    });
+
+    // modify the items in local storage array
+    // to remove the selected product item
+
+    lsContent.splice(productIndex, 1);
+    // update local storage content
+    setLSContent(lsContent);
+
+    displayProducts();
+  }
+
+  function clearCart() {
+    // clear all products from cart (and local storage)
+
+    // retrieve list of products from LS
+    const lsContent = getLSContent();
+    // empty array in local storage
+    lsContent.splice(0, lsContent.length);
+    // update local storage
+    setLSContent(lsContent);
+    // display cart content again
+    displayProducts();
+  }
+
+  function checkout() {
+    // checkout: just clear the cart
+    // after user confirms the checkout process
+    const cartProducts = cartContent.querySelector("tbody").innerHTML;
+    if (cartProducts !== "" && confirm("Are you sure you want to checkout?")) {
+      clearCart();
+    } else {
+      return;
+    }
+  }
+
+  // BIND EVENTS AND CALL FUNCTIONS
+
+  // Page load:
+  document.addEventListener("DOMContentLoaded", function(e) {
+    // display list of products in cart, if any, on page load
+    displayProducts();
+    // display cart total
+    displayCartTotal();
+  });
+
+  // open and close shopping cart
+  // when cart button is clicked
+  toggleCartBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    toggleCart();
+  });
+
+  // Save product in cart and Local Storage
+  // when add to cart button is clicked
+  productsContainer.addEventListener("click", function(e) {
+    if (e.target.classList.contains("add-to-cart")) {
+      e.preventDefault();
+      const clickedBtn = e.target;
+      saveProduct(clickedBtn);
+    }
+  });
+
+  productsContainer.addEventListener("click", function(e) {
+    if (e.target.classList.contains("add-to-cart")) {
+      displayCartTotal();
+    }
+  });
+
+  // bind removeProduct to click event of the cartContent table
+  cartContent.querySelector("tbody").addEventListener("click", function(e) {
+    e.preventDefault();
+    // identify the button that was clicked
+    const clickedBtn = e.target;
+    // if it's a remove button
+    if (e.target.classList.contains("remove")) {
+      // get the value of the data-id property, which contains the
+      // id of the selected product
+      const productId = clickedBtn.getAttribute("data-id");
+      // use the id to remove the selected product
+      removeProduct(productId);
+      // display products in the cart again,
+      // now the list should be displayed with 1 less product
+      // or empty if no products are left in the cart
+
+      // adjust the total
+      displayCartTotal();
+    }
+  });
+
+  // bind the button to clear the cart both to the function that
+  // clears the cart and to the function that adjusts the total price
+  clearCartBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    clearCart();
+  });
+  clearCartBtn.addEventListener("click", displayCartTotal);
+
+  // bind the button that does the checkout both to the function that
+  // controls the checkout and and to the function that adjusts the total price
+  checkoutBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    checkout();
+  });
+  checkoutBtn.addEventListener("click", displayCartTotal);
+})();
+
+</script>
+

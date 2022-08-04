@@ -1,0 +1,821 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/400f649c3f.js" crossorigin="anonymous"></script>
+
+
+
+<style>
+	.breadcrumbs-container {
+    display: block;
+    padding: 29px 0 22px;
+    font-size: 14px;
+}
+.breadcrumbs-link {
+    color: #282c3f;
+    text-transform: capitalize;
+    display: inline-block;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+}
+.breadcrumbs-link:hover{
+	color: #ff3e6c;
+}
+a {
+    text-decoration: none;
+    color: #282c3f;
+}
+.breadcrumbs-separator {
+    color: #282c3f;
+    margin: 0 5px;
+    padding-top: 5px;
+}
+.grey-header{
+color: #535665;
+    padding: 5px 20px 14px 0;
+    font-size: 20px;
+    opacity: .8;
+    font-weight: 400;
+}
+.index-overallRating {
+    margin-bottom: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 29px;
+    padding: 8px;
+    border: 1px solid #eaeaec;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #282c3f;
+}
+.index-overallRating .index-starIcon {
+    margin: 0 -8px 0 -2px;
+    -webkit-transform: scale(.6);
+    transform: scale(.6);
+}
+
+.sprites-productRatingsExcellentIcon {
+    background-position: -171px -28px;
+    width: 24px;
+    height: 24px;
+}
+.index-overallRating .index-separator {
+    margin-left: 8px;
+    margin-top: -2px;
+    color: #d4d5d9;
+    width: 1px;
+}
+.index-overallRating .index-ratingsCount {
+    margin-left: 8px;
+    font-weight: 400;
+    color: #535766;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.border-bottom{
+    width: auto;
+    border-bottom: 1px solid #d4d5d9;
+}
+.pdp-mrp {
+    height: 22px;
+    opacity: .8;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.pdp-mrp, .pdp-price {
+    color: #282c3f;
+    margin-right: 12px;
+}
+.pdp-discount {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    color: #ff905a;
+}
+.size-buttons-size-button {
+    position: relative;
+}
+
+.size-buttons-size-button-default {
+    background-color: #fff;
+    border: 1px solid #bfc0c6;
+    border-radius: 50px;
+    padding: 0;
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    color: #282c3f;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    position: relative;
+}
+.size-buttons-size-strike-hide {
+    width: 0;
+    height: 0;
+}
+.size-buttons-unified-size {
+    margin: 0;
+    font-size: 14px;
+    padding: 0 8px;
+    font-weight: 500;
+}
+.size-buttons-size-button:focus {
+    outline: 0;
+}
+
+.size-buttons-size-button:hover {
+    border: 1px solid #ff3f6c;
+}
+@media (min-width: 600px){
+.pdp-action-container {
+    padding: 0;
+    z-index: 0;
+    width: 84%;
+}}
+@media (min-width: 600px){
+.pdp-fixed {
+    position: relative;
+}}
+.pdp-fixed {
+    position: fixed;
+    bottom: 0;
+}
+.pdp-action-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-top: 15px;
+}
+.pdp-flex.pdp-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.pdp-flex {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+@media (min-width: 980px){
+.pdp-add-to-bag {
+    text-align: center;
+    padding: 15px 0;
+}}
+@media (min-width: 980px){
+.pdp-add-to-bag, .pdp-add-to-wishlist {
+    margin-top: 0;
+    border-radius: 4px;
+}}
+@media (min-width: 360px){
+.pdp-add-to-bag {
+    min-width: 108px;
+}}
+@media (min-width: 320px){
+.pdp-add-to-bag {
+    min-width: 88px;
+}}
+.pdp-add-to-bag {
+    border-radius: 0;
+    padding: 12px 15px;
+    min-width: 108px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #ff3e6c;
+    border: 1px solid #ff3e6c;
+    color: #fff;
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    text-align: center;
+    width: 100%;
+    margin-right: 3%;
+}
+.pdp-button {
+    border-radius: 3px;
+    outline: 0;
+    margin-top: 10px;
+    padding: 10px 30px;
+    font-size: 16px;
+    min-height: 22px;
+}
+
+.pdp-flex.pdp-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.pdp-flex {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+.pdp-whiteBag {
+    margin-right: 12px;
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+}
+.sprites-whiteBag {
+    background-position: -2283px -40px;
+    width: 23px;
+    height: 22px;
+}
+.pdp-flex.pdp-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.pdp-flex {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+@media (min-width: 980px){
+.pdp-add-to-wishlist {
+    width: 34%;
+    text-align: center;
+    padding: 10px 0;
+}}
+@media (min-width: 980px){
+.pdp-add-to-bag, .pdp-add-to-wishlist {
+    margin-top: 0;
+    border-radius: 4px;
+}}
+.pdp-add-to-wishlist {
+    border-radius: 0;
+    padding: 12px 15px;
+    font-weight: 500;
+    cursor: pointer;
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    border: 1px solid #d4d5d9;
+    background-color: #fff;
+    letter-spacing: .4px;
+    color: #282c3f;
+}
+.pdp-button {
+    border-radius: 3px;
+    outline: 0;
+    margin-top: 10px;
+    padding: 10px 30px;
+    font-size: 16px;
+    min-height: 22px;
+}
+
+
+.pdp-flex.pdp-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.pdp-flex {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+.pdp-notWishlistedIcon, .pdp-wishlistedIcon {
+    margin: -2px 8px;
+}
+.sprites-notWishlisted {
+    width: 17px;
+    height: 22px;
+    background-position: -315px -186px;
+}
+
+.SelectedSizeSellerInfo-sellerName {
+    margin-top: 4px;
+}
+.SelectedSizeSellerInfo-sellerButton {
+    cursor: pointer;
+    color: #ff3e6c;
+    font-weight: 500;
+}
+
+.delivery-pincode{
+    color: #282c3f;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.specification{
+	color: #282c3f;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.pincode-deliveryContainer>form {
+    margin: 16px 0 0;
+    padding: 0;
+    position: relative;
+}
+.pincode-code {
+    border-radius: 5px;
+    border: 1px solid #d4d5d9;
+    -webkit-box-shadow: 0;
+    box-shadow: 0;
+    padding: 10px;
+    font-size: 16px;
+    min-width: 160px;
+    outline: 0;
+    width: 250px;
+}
+
+button, input, select, textarea {
+    margin: 0;
+}
+button, input, select {
+    overflow: visible;
+}
+button, input, select, textarea {
+    font: inherit;
+}
+.pincode-check {
+    position: relative;
+    left: -60px;
+    background-color: transparent;
+}
+.pincode-button {
+    outline: 0;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #fff;
+    border: 0;
+    color: #ff3e6c;
+    text-transform: capitalize;
+}
+[type=reset], [type=submit], button, html [type=button] {
+    -webkit-appearance: button;
+}
+[type=button], [type=reset], [type=submit], button {
+    cursor: pointer;
+}
+
+.grey-content{
+	color: #494c5a;
+    font-size: 17px;
+    opacity: .8;
+    font-weight: 400;
+}
+.grey-content-details{
+	color: #494c5a;
+    font-size: 14px;
+    opacity: .8;
+    font-weight: 400;
+}
+.index-tableContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.index-tableContainer .index-row:nth-child(odd) {
+    margin-right: 10%;
+}
+.index-tableContainer .index-row {
+    position: relative;
+    border-bottom: 1px solid #eaeaec;
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%;
+}
+.index-tableContainer .index-row .index-rowKey {
+    position: relative;
+    color: #7e818c;
+    font-size: 12px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+.index-tableContainer .index-row .index-rowValue {
+    position: relative;
+    color: #282c3f;
+    font-size: 16px;
+    line-height: 1.2;
+}
+.star{
+	color: green;
+	font-size: 35px;
+}
+.star-1{
+	color: green;
+	font-size: 20px;
+}
+.border-left{
+    margin-left: 125px;
+    margin-top: -71px;
+    height: 120px;
+    border-left: 1.2px solid #eaeaec;
+}
+.answer-wrapper-AnswerWrapper.answer-wrapper-onlyHighlighted {
+    margin: 10px 0;
+}
+
+.answer-wrapper-AnswerWrapper {
+    margin: 25px 0;
+    font-size: 14px;
+    color: #3e4152;
+}
+.answer-AnswerRow {
+    margin-bottom: 4px;
+}
+.answer-AnswerRow .answer-fill-wrapper {
+    margin-right: 12px;
+    width: 140px;
+    height: 4px;
+    background-color: #eaeaec;
+    position: relative;
+    border-radius: 2px;
+}
+.answer-AnswerRow .answer-fill-wrapper .answer-fill {
+    background-color: #03a685;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 2px;
+}
+.answer-AnswerRow .answer-caption-wrapper.answer-highlighted {
+    font-weight: 500;
+}
+.answer-AnswerRow .answer-caption-wrapper {
+    font-size: 13.5px;
+}
+.answer-AnswerRow .answer-caption-wrapper, .answer-AnswerRow .answer-fill-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+}
+.rating-chart{
+	margin-top: -10pc;
+    margin-left: 8pc;
+}
+.sub-header{
+	color: #282c3f;
+    display: inline-block;
+}
+
+
+
+.img-zoom-out{
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.img-zoom-out:hover{
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
+
+
+#bottom-card{
+margin-top:-17pc;
+}
+@media  (max-width: 600px)  {
+    #bottom-card {
+        margin-top:0pc;
+}
+}
+
+
+
+</style>
+<!----------------------------------------CAROUSEL STARTS------------------------------------------------->
+
+
+
+<!----------------------------------------CAROUSEL ENDS------------------------------------------------->
+
+
+
+
+<!----------------------------------------BIGGEST DEALS ON TOP BRANDS CONTAINER STARTS----------------------------------------------->
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- <div class="breadcrumbs-container" style="    margin-left: 27px;
+font-weight: 600;">
+	<a href="/" class="breadcrumbs-link">NAVYATA</a>
+	<span class="breadcrumbs-separator">/</span>
+	<a href="/clothing" class="breadcrumbs-link">WOMEN</a>
+	<span class="breadcrumbs-separator">/</span>
+	<a href="/women-clothing" class="breadcrumbs-link">INDIAN KURTI</a>
+	<span class="breadcrumbs-separator">/</span>
+	<a href="/kurta-sets" class="breadcrumbs-link">KURTA SETS</a>
+
+</div> -->
+
+
+
+
+
+<!----------------------------------------BIGGEST DEALS ON TOP BRANDS CONTAINER STARTS----------------------------------------------->
+ 
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+			<div class="img-zoom-out">
+            	<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16680490/2022/5/27/a217f3a2-003a-4f57-b22a-d15daf229ca91653651776288-LOreal-Extraordinary-Oil-Smooth-Steam-Hair-Mask-for-Smooth---1.jpg" 
+        					alt="d-1" style="width: 100%;" >
+			</div>
+        </div>
+		
+		<div class="col-md-4">
+			<div class="img-zoom-out">
+					<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16680490/2022/5/27/67ae7161-505d-4415-a86b-6bd1a93d93e21653651776270-LOreal-Extraordinary-Oil-Smooth-Steam-Hair-Mask-for-Smooth---3.jpg" 
+							alt="d-1" style="width: 100%;" >
+			</div>
+        </div>
+
+		<div class="col-md-4">
+				<h4><strong>LOreal</strong></h4>
+				<h5 class="grey-header">Extraordinary Oil Smooth Steam Hair Mask for Smooth & Straight Frizz-Free Hair</h5>
+				<div class="index-overallRating">
+					<div style="color: green;">★ &nbsp;</div>
+					<div> 4.3</div>
+					<span class="myntraweb-sprite index-starIcon index-productRatingsExcellentIcon sprites-productRatingsExcellentIcon"></span>
+					<div class="index-separator">|</div>
+					<div class="index-ratingsCount">
+						<!-- react-text: 82 -->5.9k<!-- /react-text --><!-- react-text: 83 --> Ratings<!-- /react-text --></div>
+				</div>
+
+				<div class="border-bottom"></div>
+				<br>
+
+					<h3><strong>₹ 799</strong> &nbsp; 
+						<span class="pdp-mrp"><s><!-- react-text: 107 -->Rs. 
+						<!-- /react-text --><!-- react-text: 108 -->1999
+						<!-- /react-text --></s></span><span class="pdp-discount">(60% OFF)</span>
+					</h3>
+						<br>
+				
+				<!-- <strong>Select Size</strong>
+				<br>
+				<br>
+				<button class="size-buttons-size-button size-buttons-size-button-default">
+					<span class="size-buttons-size-strike-hide"></span> 
+					<p class="size-buttons-unified-size">XS</p>
+				</button> &nbsp;
+				<button class="size-buttons-size-button size-buttons-size-button-default">
+					<span class="size-buttons-size-strike-hide"></span>
+					<p class="size-buttons-unified-size">S</p>
+				</button> &nbsp;
+					<button class="size-buttons-size-button size-buttons-size-button-default">
+					<span class="size-buttons-size-strike-hide"></span>
+					<p class="size-buttons-unified-size">M</p>
+				</button> &nbsp;
+				<button class="size-buttons-size-button size-buttons-size-button-default">
+					<span class="size-buttons-size-strike-hide"></span>
+					<p class="size-buttons-unified-size">L</p>
+				</button> &nbsp;
+				<button class="size-buttons-size-button size-buttons-size-button-default">
+					<span class="size-buttons-size-strike-hide"></span>
+					<p class="size-buttons-unified-size">XL</p>
+				</button> &nbsp;
+				<button class="size-buttons-size-button size-buttons-size-button-default">
+					<span class="size-buttons-size-strike-hide"></span>
+					<p class="size-buttons-unified-size">XXL</p>
+				</button> -->
+
+				<div class=""><div class="pdp-action-container pdp-fixed">
+					<div class="pdp-add-to-bag pdp-button pdp-flex pdp-center">
+						<span class="myntraweb-sprite pdp-whiteBag sprites-whiteBag pdp-flex pdp-center" style="font-size: 20px;">👜</span>
+						<!-- react-text: 254 -->ADD TO BAG<!-- /react-text -->
+					</div>
+						<div class=" pdp-add-to-wishlist pdp-button pdp-add-to-wishlist pdp-button pdp-flex pdp-center">
+							<span class="myntraweb-sprite pdp-notWishlistedIcon sprites-notWishlisted pdp-flex pdp-center" style="font-size: 30px;">♡</span>
+							<span class=""> WISHLIST</span>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="border-bottom"></div>
+				<br>
+				<div class="SelectedSizeSellerInfo-sellerName">
+					<!-- react-text: 1671 -->Seller: <!-- /react-text -->
+					<span class="SelectedSizeSellerInfo-sellerButton">SUNSHINE LIFESTYLE</span>
+				</div>
+				<h3><strong>₹ 799</strong> &nbsp; 
+					<span class="pdp-mrp"><s><!-- react-text: 107 -->Rs. 
+					<!-- /react-text --><!-- react-text: 108 -->1999
+					<!-- /react-text --></s></span><span class="pdp-discount">(60% OFF)</span>
+				</h3>
+				<br>
+				<div class="border-bottom"></div>
+		</div>
+
+	
+	</div>
+</div>
+<br>
+<div class="container-fluid">
+    <div class="row">
+
+
+				<div class="col-md-4">
+					<div class="img-zoom-out">
+							<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16680490/2022/5/27/31cda7b4-cd94-420e-915d-853054dd8a551653651776280-LOreal-Extraordinary-Oil-Smooth-Steam-Hair-Mask-for-Smooth---2.jpg" 
+										alt="d-1" style="width: 100%;" >
+					</div>
+				</div>
+
+
+				<div class="col-md-4">
+					<div class="img-zoom-out">
+						<img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16680490/2022/5/27/b4b00bf2-fc87-4b1a-84ed-992bd902ecc71653651776261-LOreal-Extraordinary-Oil-Smooth-Steam-Hair-Mask-for-Smooth---4.jpg" 
+									alt="d-1" style="width: 100%;" >
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<h4 class="specification">Specifiaction &nbsp; ✔</h4>
+
+					<br>
+							<div class="index-tableContainer">
+								<div class="index-row">
+									<div class="index-rowKey">Concern</div>
+									<div class="index-rowValue">Anti-Frizz</div>
+								</div>
+								<div class="index-row">
+									<div class="index-rowKey">Hair Thickness</div>
+									<div class="index-rowValue">Normal</div>
+								</div>
+								<div class="index-row">
+									<div class="index-rowKey">Hair Type</div>
+									<div class="index-rowValue">Normal</div>
+								</div>
+								<div class="index-row">
+									<div class="index-rowKey">Preference</div>
+									<div class="index-rowValue">Paraben-Free</div>
+								</div><div class="index-row">
+									<div class="index-rowKey">Sustainable</div>
+									<div class="index-rowValue">Regular</div>
+								</div>
+							</div>
+
+							<br>
+
+							<h4 class="specification">PRODUCT DETAILS &nbsp; 📄 </h4>
+
+							<br>
+
+							<h6 class="grey-content-details">Yellow and white printed kurta with palazzos</h6>
+							<h6 class="grey-content-details">Yellow and white straight knee length kurta, has a round neck, three-quarter sleeves, side slits</h6>
+							<h6 class="grey-content-details">Yellow and white Printed palazzos, has partially elasticated waistband</h6>
+
+							<br>
+
+							<h4 class="specification">Size & Fit</h4>
+							<h6 class="grey-content-details">The model (height 5'8") is wearing a size S</h6>	
+
+							<br>
+
+							<h4 class="specification">Material & Care</h4>
+							<h6 class="grey-content-details">Top fabric: Pure Cotton</h6>
+							<h6 class="grey-content-details">Bottom fabric: Pure Cotton</h6>
+							<h6 class="grey-content-details">Machine-wash</h6>
+
+							<br>
+							<h4 class="delivery-pincode">DELIVERY OPTIONS &nbsp; 🚚</h4>
+							<br>
+							<form autocomplete="off">
+								<input type="text" placeholder="Enter pincode" 
+								class="pincode-code" value="" name="pincode">
+								<input type="submit" class="pincode-check pincode-button" value="Check">
+							</form>
+							<br>
+						<ul>
+							<li><h6 class="grey-content">100% Original Products</h6></li>	
+							<li><h6 class="grey-content">Pay on delivery might be available</h6></li>
+							<li><h6 class="grey-content">Easy 30 days returns and exchanges</h6></li>	
+						</ul>									
+							<br>
+				</div>
+
+				<div class="col-md-4" id="bottom-card">
+
+				
+					<h4 class="delivery-pincode">Ratings  &nbsp; <span  class="star-1">✪</span></h4>
+					<br>
+					<h1><strong>4.3 <span class="star">★</span></strong></h1>
+					<h6 class="grey-content-details">5.9k Verified Buyers</h6>
+
+					<span>	<div class="border-left"></div></span>
+
+					<div class="rating-chart">
+						<div class="answer-wrapper-AnswerWrapper answer-wrapper-onlyHighlighted"><div>Fit</div>
+						<div class="answer-AnswerRow">
+							<div class="answer-fill-wrapper">
+								<div class="answer-fill" style="width: 77%;"></div>
+							</div>
+							<div class="answer-caption-wrapper answer-highlighted">
+								<!-- react-text: 441 -->As Expected<!-- /react-text --><!-- react-text: 442 -->
+								 (<!-- /react-text --><!-- react-text: 443 -->77%<!-- /react-text --><!-- react-text: 444 -->
+								 )<!-- /react-text -->
+							</div>
+						</div>
+					</div>
+					<div class="answer-wrapper-AnswerWrapper answer-wrapper-onlyHighlighted"><div>Length</div>
+						<div class="answer-AnswerRow">
+							<div class="answer-fill-wrapper">
+								<div class="answer-fill" style="width: 81%;"></div>
+							</div>
+							<div class="answer-caption-wrapper answer-highlighted">
+								<!-- react-text: 451 -->As Expected<!-- /react-text --><!-- react-text: 452 --> (<!-- /react-text -->
+								<!-- react-text: 453 -->81%<!-- /react-text --><!-- react-text: 454 -->)<!-- /react-text -->
+							</div>
+						</div>
+					</div>
+					<div class="answer-wrapper-AnswerWrapper answer-wrapper-onlyHighlighted">
+						<div>Transparency</div>
+							<div class="answer-AnswerRow">
+								<div class="answer-fill-wrapper">
+									<div class="answer-fill" style="width: 59%;"></div>
+								</div>
+								<div class="answer-caption-wrapper answer-highlighted">
+									<!-- react-text: 461 -->Not Transparent<!-- /react-text --><!-- react-text: 462 --> 
+									(<!-- /react-text --><!-- react-text: 463 -->59%<!-- /react-text --><!-- react-text: 464 -->)
+									<!-- /react-text -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-4" id="bottom-card">
+					<h4 class="delivery-pincode">BEST OFFERS  &nbsp; <span  class="star-1">🔰</span></h4>
+					<div class="sub-header">
+						<br>
+						<strong>Best Price </strong> <strong style="color:orange;"> Rs. 699</strong>
+					
+						<ul>
+							<li>Applicable on: Orders above Rs. 2999 (only on first purchase)</li>
+							<li>Coupon code: NAVYATA500</li>
+							<li>Coupon Discount: Rs. 133 off (check cart for final savings)</li>
+							<li>10% Instant Discount on ICICI Bank Credit and Debit Cards</li>
+						
+						</ul>
+					</div>
+				</div>
+			
+				
+
+
+	</div>
+</div>
+
+
